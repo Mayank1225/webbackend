@@ -49,6 +49,11 @@ app.use("/api/order", orderRoutes);
 
 // const io = initializeSocket(server);
 
+app.get('/api/test', (req, res) => {
+  console.log("server is running");
+  
+  res.send('API is working!');
+});
 // Start the server
 app.listen(process.env.PORT || 3001, () => {
   console.log(`Server is running on port ${process.env.PORT || 3001}`);
