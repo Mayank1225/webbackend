@@ -51,10 +51,11 @@ app.use("/api/order", orderRoutes);
 
 app.get('/api/test', (req, res) => {
   console.log("server is running");
-  
   res.send('API is working!');
 });
+
+module.exports = app;
 // Start the server
-app.listen(process.env.PORT || 3001, () => {
-  console.log(`Server is running on port ${process.env.PORT || 3001}`);
-});
+// app.listen(process.env.PORT || 3001, () => {
+//   console.log(`Server is running on port ${process.env.PORT || 3001}`);
+// });
